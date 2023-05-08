@@ -1,0 +1,51 @@
+/*Medias Queries*/
+@media (max-width: 768px) {
+
+    header #logo img{
+        width: 30vw;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main section {
+        float: none;
+        width: 90vw;
+        order: 2;
+        text-align: center;
+    }
+
+    main section h2  {
+        font-size: 6vw;
+    }
+
+    main section p {
+        font-size: 3.5vw;
+    }
+
+    main section button {
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    main aside {
+        width: 90vw;
+        order: 1;
+    }
+
+    aside img {
+        margin: auto;
+        display: block;
+    }
+
+    footer p {
+        font-size: 2.5vw;
+    }
+
+    footer #redes-sociais {
+        text-align: center;
+    }
+
+}
