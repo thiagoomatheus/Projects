@@ -33,7 +33,7 @@ async function getAllPosts() {
         title.textContent = post.title;
         body.textContent = post.body;
         link.textContent = "Ler";
-        link.setAttribute("href", `/exercicios/projeto3/post.html?id=${post.id}`)
+        link.setAttribute("href", `/projeto3/post.html?id=${post.id}`)
 
         div.appendChild(title);
         div.appendChild(body);
@@ -121,14 +121,4 @@ if (!postId) {
 }
 else {
     getPost(postId)
-
-    // submitComment.addEventListener("submit", function(e) {
-
-    //     e.preventDefault()
-        
-    //     let userEmail = emailArea.value;
-    //     let userComment = commentArea.value;
-
-    //     newComment(userEmail, userComment)
-    // })
 }
