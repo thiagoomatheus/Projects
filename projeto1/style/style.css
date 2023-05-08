@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(300px, 500px);
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(172, 35, 69), rgb(35, 16, 78));
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    padding: 5px;
+    text-align: center;
+}
+
+#nova-tarefa {
+    padding-top: 30px;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    row-gap: 20px;
+}
+
+#add-tarefa {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 50px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    padding: 0 20px;
+}
+
+#add-tarefa input, #add-tarefa button {
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid rgb(35, 16, 78);
+    color: rgb(35, 16, 78);
+}
+
+#add-tarefa input {
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+#add-tarefa button {
+    font-size: 1.5em;
+    background: white;
+}
+
+#tarefas-atuais {
+    padding: 20px 20px;
+}
+
+.tarefas {
+    display: grid;
+    grid-template-columns: 1fr 40px 40px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    background: white;
+    border-bottom: 3px solid #23104e;
+}
+
+.tarefas span {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: transparent;
+    height: 100%;
+    font-size: 1.5em;
+}
+
+.concluido {
+    color: white;
+    background-color: #23104e;
+}

@@ -1,0 +1,55 @@
+@media screen and (min-width: 768px) {
+    body {
+        background-image: linear-gradient(var(--cor2), var(--cor1));
+    }
+
+    main {
+        width: 90vw;
+        height: 280px;
+    }
+
+    div#img-login {
+        width: 30%;
+        height: 100%;
+        float: left;
+    }
+
+    #login {
+        width: 67%;
+        float: right;
+    }
+
+    div.campo-formulario input{
+        width: 88%;
+    }
+}
+
+@media screen and (min-width: 992px ) {
+
+    main {
+        width: 950px;
+        height: 350px;
+    }
+    
+    div#img-login {
+        width: 49%;
+        height: 100%;
+        float: right;
+    }
+
+    #login {
+        width: 49%;
+        float: left;
+    }
+
+    #login h1 {
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    #login p {
+        font-size: 1em;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,353 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft Cyan (Full Slider Bar): hsl(174, 77%, 80%)
+- Strong Cyan (Slider Backround): hsl(174, 86%, 45%)
+- Light Grayish Red (Discount Background): hsl(14, 92%, 95%)
+- Light Red (Discount Text): hsl(15, 100%, 70%)
+- Pale Blue (CTA Text): hsl(226, 100%, 87%)
+
+### Neutral
+
+- White (Pricing Component Background): hsl (0, 0%, 100%)
+- Very Pale Blue (Main Background): hsl(230, 100%, 99%)
+- Light Grayish Blue (Empty Slider Bar): hsl(224, 65%, 95%)
+- Light Grayish Blue (Toggle Background): hsl(223, 50%, 87%)
+- Grayish Blue (Text): hsl(225, 20%, 60%)
+- Dark Desaturated Blue (Text & CTA Background): hsl(227, 35%, 25%)
+
+## Typography
+
+### Body Copy
+
+- Font size (Introductory Paragraph): 15px
+
+### Font
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 600, 800 */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root {
+    /*Color Primary*/
+    --Soft-Cyan: hsl(174, 77%, 80%);
+    --Strong-Cyan: hsl(174, 86%, 45%);
+    --Light-Grayish-Red: hsl(14, 92%, 95%);
+    --Light-Red: hsl(15, 100%, 70%);
+    --Pale-Blue: hsl(226, 100%, 87%);
+    /*Color Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Very-Pale-Blue: hsl(230, 100%, 99%);
+    --Light-Grayish-Blue: hsl(224, 65%, 95%);
+    --Light-Grayish-Blue-Toggle: hsl(223, 50%, 87%);
+    --Grayish-Blue: hsl(225, 20%, 60%);
+    --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+    /*Font-family*/
+    --Manrope: 'Manrope', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    font-family: var(--Manrope);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(300px, 500px);
+    grid-template-rows: 150px 410px;
+    justify-content: center;
+    row-gap: 30px;
+    padding: 30px 40px;
+    background: url(../images/bg-pattern.svg) left top no-repeat;
+    background-size: auto;
+    color: var(--Grayish-Blue);
+    font-size: 0.8em;
+}
+
+main header {
+    text-align: center;
+    background: url(../images/pattern-circles.svg) center center no-repeat;
+    display: grid;
+    grid-template-rows: 30px 50px;
+    align-content: space-around;
+    padding-top: 30px;
+}
+
+#subtitulos {
+    display: grid;
+    row-gap: 10px;
+}
+
+main header h1 {
+    font-size: 1.5em;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+#planos {
+    display: grid;
+    grid-template-rows: 200px 150px;
+    grid-template-columns: 1fr;
+    background: var(--White);
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.329);
+    row-gap: 20px;
+    padding: 20px 0;
+}
+
+.linha {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#escolha-plano {
+    display: grid;
+    grid-template-rows: 30px 40px 40px 30px;
+    align-content: space-between;
+    margin: 0 20px;
+}
+
+#pageview p {
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+ #slider label {
+    width: 70%;
+}
+
+#slider label #plano {
+    -webkit-appearance: none;
+    border: none;
+    background: linear-gradient(to left, var(--Light-Grayish-Blue) 50%, var(--Strong-Cyan) 50%);
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.397);
+}
+
+#slider #plano::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--Strong-Cyan) url(../images/icon-slider.svg) center center no-repeat;
+    margin-top: -2px;
+    box-shadow: 0px 15px 20px var(--Soft-Cyan);
+}
+
+#slider #plano::-moz-range-thumb {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--Strong-Cyan) url(../images/icon-slider.svg) center center no-repeat;
+    margin-top: -2px;
+    box-shadow: 0px 15px 20px var(--Soft-Cyan);
+}
+
+#slider #plano::-webkit-slider-thumb:active {
+    background: hsl(174, 85%, 31%) url(../images/icon-slider.svg) center center no-repeat;
+}
+
+#slider #plano::-moz-range-thumb:active {
+    background: hsl(174, 85%, 31%) url(../images/icon-slider.svg) center center no-repeat;
+}
+
+#preco-periodo {
+    display: grid;
+    grid-template-columns: 120px 40px;
+    justify-content: center;
+}
+
+#preco-periodo #preco {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--Dark-Desaturated-Blue);
+}
+
+#escolha-periodo {
+    display: grid;
+    grid-template-columns: 75px 70px 75px 30px;
+    column-gap: 10px;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+#escolha-periodo span {
+    font-size: 0.9em;
+}
+
+#escolha-periodo #desconto {
+    font-size: 0.8em;
+    padding: 2px 4px;
+    border-radius: 5px;
+    background: var(--Light-Grayish-Red);
+    color: var(--Light-Red);
+    font-weight: 800;
+}
+
+#escolha-periodo label input[type="checkbox"] {
+    appearance: none;
+    background: var(--Light-Grayish-Blue-Toggle);
+    height: 23px;
+    width: 45px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    transition: .4s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.452);
+}
+
+#escolha-periodo label input[type="checkbox"]:hover {
+    background: var(--Soft-Cyan);
+}
+
+#escolha-periodo label input[type="checkbox"]::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.466);
+}
+
+#escolha-periodo label input[type="checkbox"]:checked {
+    background: var(--Strong-Cyan);
+    justify-items: end;
+}
+
+#beneficios {
+    display: grid;
+    grid-template-rows: 70px 60px;
+    justify-items: center;
+    row-gap: 10px;
+    border-top: 2px solid var(--Light-Grayish-Blue-Toggle);
+    padding-top: 20px;
+}
+
+#beneficios ul {
+    display: grid;
+    justify-items: center;
+}
+
+#beneficios li {
+    font-size: 0.9em;
+    list-style-image: url(../images/icon-check.svg);
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+#beneficios button {
+    font-size: 1.1em;
+    color: var(--Pale-Blue);background: var(--Dark-Desaturated-Blue);
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.459);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        grid-template-rows: 170px 420px;
+    }
+
+    main header {
+        grid-template-rows: 70px 25px;
+        row-gap: 20px;
+    }
+
+    #subtitulos {
+        display: block;
+    }
+
+    main header h1 {
+        font-size: 2em;
+    }
+
+    main header p, #escolha-plano p {
+        font-size: 1.2em;
+    }
+
+    #planos {
+        grid-template-rows: 230px 150px;
+    }
+
+    #pageview {
+        grid-area: pageview;
+    }
+    
+    #preco-periodo {
+        grid-area: preco;
+    }
+    
+    #slider {
+        grid-area: slider;
+    }
+    
+    #escolha-periodo {
+        grid-area: periodo;
+    }
+
+    #escolha-plano {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 60px 40px 30px;
+        grid-template-areas: 
+        "pageview preco"
+        "slider slider"
+        "periodo periodo"
+        ;
+        align-content: space-between;
+    }
+
+    #preco-periodo {
+        grid-template-columns: 180px 50px;
+        font-size: 1.3em;
+    }
+
+     #preco-periodo #preco {
+        font-size: 2em;
+    }
+
+    #beneficios {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        padding: 0;
+    }
+}
