@@ -5,7 +5,7 @@ Esse projeto foi criado com o propósito de treinar e aprofundar os conhecimento
 
 [Acesse o projeto no ar aqui](https://thiagoomatheus.github.io/projects/huddle-landing-page/huddle-uma-nova-comunidade/index.html)
 
-[Acesse o código aqui](https://github.com/thiagoomatheus/projects/huddle-landing-page/blob/main/huddle-uma-nova-comunidade/)
+[Acesse o código aqui](https://github.com/thiagoomatheus/projects/tree/main/huddle-landing-page/huddle-uma-nova-comunidade)
 
 Nesse primeiro desafio temos algo mais simples, servindo como apresentação para o serviço Huddle e tendo o objetivo de capturar possíveis usuários.
 Algumas habilidades desenvolvidas nesse desafio foram:
@@ -20,7 +20,7 @@ Algumas habilidades desenvolvidas nesse desafio foram:
 
 [Acesse o projeto no ar aqui](https://thiagoomatheus.github.io/projects/huddle-landing-page/huddle-crie-sua-comunidade/index.html)
 
-[Acesse o código aqui](https://github.com/thiagoomatheus/projects/huddle-landing-page/blob/main/huddle-crie-sua-comunidade/)
+[Acesse o código aqui](https://github.com/thiagoomatheus/projects/tree/main/huddle-landing-page/huddle-crie-sua-comunidade)
 
 No segundo desafio temos uma landing-page com cabeçalho, conteúdo - dividido em 4 seções - e um rodapé com 2 seções. Essa landing-page trás informações sobre o serviço e dados relevantes sobre a plataforma.
 Algumas habilidades desenvolvidas nesse desafio foram:
