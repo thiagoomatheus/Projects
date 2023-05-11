@@ -6,26 +6,54 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | IP Address Tracker</title>
   <link rel="stylesheet" href="style/style.css">
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
   crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-  crossorigin=""></script>
-  <script src="script/script.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    crossorigin=""></script>
+      
 </head>
 <body>
   <main>
-    <section>
-      ip Address
-    </section>
-    <section>
-      map
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form>
+        <label for="ip">
+          <input type="text" name="ip" id="ip">
+        </label>
+        <label for="submit">
+          <input type="submit" value=">" id="submit">
+        </label>
+      </form>
+      <div id="result">
+        <div>
+          <h3>IP ADDRESS</h3>
+          <P>0.0.0.0</P>
+        </div>
+        <div>
+          <h3>LOCATION</h3>
+          <P>London, UK</P>
+        </div>
+        <div>
+          <h3>TIMEZONE</h3>
+          <P>UTC +0:00
+          </P>
+        </div>
+        <div>
+          <h3>ISP</h3>
+          <P>SpaceX Starlink</P>
+        </div>
+      </div>
+    </header>
+    <section id="map">
     </section>
   </main>
   <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
+  <script src="script/script.js"></script>
 </body>
 </html>
