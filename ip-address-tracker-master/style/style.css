@@ -89,3 +89,7 @@ form #submit:hover {
     height: 60vh;
     z-index: 0;
 }
+
+.error {
+    outline: 2px solid red;
+}
