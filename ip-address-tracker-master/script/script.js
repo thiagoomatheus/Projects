@@ -4,7 +4,9 @@ let lat = 51.505;
 
 let lng = -0.09;
 
-let map = L.map('map').setView([lat, lng], 13);
+let map = L.map('map', {
+    zoomControl: false
+}).setView([lat, lng], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -13,6 +15,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let marker = L.marker([lat, lng]).addTo(map);
 
+L.con
 /* Fim Mapa*/
 
 const inputIp = document.querySelector("#ip");
@@ -83,11 +86,10 @@ function returnLocalForUser(data) {
     lat = data.location.lat;
     lng = data.location.lng;
 
-    newMap()
+    newMap(lat, lng)
 }
 
 function newMap(lat, lng) {
-    map = L.map('map').setView([lat, lng], 13);
-
-    marker = L.marker([lat, lng]).addTo(map);
+    map.setView([lat, lng], 13);
+    marker.setLatLng([lat, lng]);
 }
