@@ -43,6 +43,8 @@ sumbit.addEventListener("click", (e)=> {
         returnError()
     }
     else {
+        inputIp.classList.remove("error");
+        sumbit.classList.remove("error")
         trackIp(inputIp.value)
     }
 })
@@ -61,6 +63,7 @@ function validateIp(input) {
 
 function returnError() {
     inputIp.classList.add("error");
+    sumbit.classList.add("error")
     alert("Enter a valid ip number");
 }
 

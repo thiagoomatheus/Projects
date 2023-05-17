@@ -12,12 +12,13 @@
     margin: 0;
     font-family: var(--font);
     font-size: 18px;
-    border: 1px solid red;
+
 }
 
 header {
     height: 40vh;
-    background: url(../images/pattern-bg-mobile.png);
+    background: url(../images/pattern-bg-mobile.png) no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-rows: auto;
     row-gap: 20px;
@@ -71,19 +72,19 @@ form #submit:hover {
     border-radius: 15px;
 }
 
- #result div {
+#result div {
     margin: 20px 0;
  }
 
- #result div h3 {
+#result div h3 {
     color: var(--dark-gray);
     font-size: .6em;
  }
 
- #result div p {
+#result div p {
     margin-top: 7px;
     font-weight: 500;
- }
+}
 
 #map {
     height: 60vh;
@@ -92,4 +93,45 @@ form #submit:hover {
 
 .error {
     outline: 2px solid red;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        height: 35vh;
+        background: url(../images/pattern-bg-desktop.png) no-repeat;
+        background-size: cover;
+        row-gap: 40px;
+    }
+    header form {
+        display: grid;
+        grid-template-columns: 450px 50px;
+        column-gap: 15px;
+    }
+    #result {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: minmax(130px, auto) ;
+        justify-content: flex-start;
+    }
+    #result div {
+        margin: 20px;
+        border-right: 1px solid var(--dark-gray);
+        text-align: left;
+    }
+    #result div:last-child {
+        border-right: none;
+    }
+    #result div h3 {
+        font-size: .7em;
+    }
+    #result div p {
+        margin-top: 15px;
+    }
+    #result div p, #result div span {
+        font-size: 1.1em;
+    }
+    #map {
+        height: 65vh;
+    }
 }
