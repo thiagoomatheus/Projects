@@ -72,13 +72,11 @@ function returnError() {
 
 async function trackIp (ip) {
 
-    let response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_L90EKe07k5QVQUew9btMvFdA8bhMi&ipAddress=${ip}`);
-    
-    let data = await response.json();
-
-    console.log(data);
-
-    returnLocalForUser(data)
+    await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_L90EKe07k5QVQUew9btMvFdA8bhMi&ipAddress=${ip}`).then(
+        r => r.json()
+    ).then(
+        data => returnLocalForUser(data)
+    )
 
 }
 
