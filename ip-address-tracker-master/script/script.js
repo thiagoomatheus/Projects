@@ -1,8 +1,8 @@
 /* Mapa*/
 
-let lat = 51.505;
+let lat = 0;
 
-let lng = -0.09;
+let lng = 0;
 
 let map = L.map('map', {
     zoomControl: false
@@ -32,6 +32,10 @@ const codePostResult = document.querySelector("#codepost-result");
 const timezoneResult = document.querySelector("#timezone-result");
 
 const ispResult = document.querySelector("#isp-result");
+
+let ipUser = fetch('https://api.ipify.org/').then(
+    r => r.text()
+    ).then(r => trackIp(r));
 
 sumbit.addEventListener("click", (e)=> {
     e.preventDefault()

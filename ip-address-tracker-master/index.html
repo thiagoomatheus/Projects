@@ -5,13 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | IP Address Tracker</title>
-  <link rel="stylesheet" href="style/style.css">
+
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
   crossorigin=""/>
 
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     crossorigin=""></script>
+
+    <!-- <script type="application/javascript">
+      function getIP(json) {
+        console.log("My public IP address is: ", json.ip);
+      }
+    </script> -->
+    
+  <!-- <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  -->
+
+  <link rel="stylesheet" href="style/style.css">
       
 </head>
 <body>
@@ -29,20 +39,20 @@
       <div id="result">
         <div>
           <h3>IP ADDRESS</h3>
-          <P id="ip-result">0.0.0.0</P>
+          <P id="ip-result"></P>
         </div>
         <div>
           <h3>LOCATION</h3>
-          <P><span id="city-result">London</span>, <span id="country-result">UK</span> <span id="codepost-result">181742</span> </P>
+          <P><span id="city-result"></span>, <span id="country-result"></span> <span id="codepost-result"></span> </P>
         </div>
         <div>
           <h3>TIMEZONE</h3>
-          <P>UTC <span id="timezone-result">+00:00</span>
+          <P>UTC <span id="timezone-result"></span>
           </P>
         </div>
         <div>
           <h3>ISP</h3>
-          <P id="isp-result">SpaceX Starlink</P>
+          <P id="isp-result"></P>
         </div>
       </div>
     </header>
