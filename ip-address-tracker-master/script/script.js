@@ -15,7 +15,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let marker = L.marker([lat, lng]).addTo(map);
 
-L.con
 /* Fim Mapa*/
 
 const inputIp = document.querySelector("#ip");
