@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="home">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,26 @@
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
-  <header id="header">
-    <div id="header-logo"><img src="assets/images/shared/logo.svg" alt="Space Tourism" ></div>
-    <nav id="header-menu">
-      <ul>
-        <li><a href="index.html">00 Home</a></li>
-        <li><a href="destination.html">01 Destination</a></li>
-        <li><a href="crew.html">02 Crew</a></li>
-        <li><a href="technology.html">03 Technology</a></li>
+  <header class="header">
+    <div class="header-logo"><a href="index.html"><img src="assets/images/shared/logo.svg" alt="Space Tourism" ></a></div>
+    <nav class="header-menu">
+      <img src="assets/images/shared/icon-hamburger.svg" alt="Menu">
+      <ul class="hidden">
+        <img src="assets/images/shared/icon-close.svg" alt="Menu">
+        <li class="active"><a href="index.html"><span class="strong">00</span> Home</a></li>
+        <li><a href="destination.html"><span class="strong">01</span> Destination</a></li>
+        <li><a href="crew.html"><span class="strong">02</span> Crew</a></li>
+        <li><a href="technology.html"><span class="strong">03</span> Technology</a></li>
       </ul>
     </nav>
   </header>
-  <main id="main">
-    <h2 id="main-subtitle">So, you want to travel to</h2>
-    <h1 id="main-title">Space</h1>
-    <p id="main-description">Let’s face it; if you want to go to space, you might as well genuinely go to 
+  <main class="main">
+    <h5 class="main-subtitle">So, you want to travel to</h5>
+    <h1 class="main-title">Space</h1>
+    <p class="main-description">Let’s face it; if you want to go to space, you might as well genuinely go to 
       outer space and not hover kind of on the edge of it. Well sit back, and relax 
       because we’ll give you a truly out of this world experience!</p>
-    <button id="main-btn">Explore</button>
+    <button class="main-btn"><h4>Explore</h4></button>
   </main>
 </body>
 </html>

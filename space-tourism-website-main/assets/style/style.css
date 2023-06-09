@@ -1,3 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
 
+p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #D0D6F9;
+  font-weight: 500;
+  text-align: center;
+  line-height: 24px;
+  padding: 5px;
+}
+
+li {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  color: #D0D6F9;
+  font-weight: 500;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, li {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Bellefair", serif;
+  font-size: 80px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Bellefair", serif;
+  font-size: 56px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+h5 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: #D0D6F9;
+  font-weight: 500;
+  text-align: center;
+}
+
+.subheading-1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  letter-spacing: 0;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.subheading-2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  color: #D0D6F9;
+  font-weight: 500;
+  text-align: center;
+}
+
+.strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+#home body {
+  background: #0b0d17 url("../images/home/background-home-mobile.jpg") no-repeat center top;
+  background-size: cover;
+  color: #fff;
+  padding: 24px;
+}
+
+#destination body {
+  background: #0b0d17 url("../images/destination/background-destination-mobile.jpg") no-repeat center top;
+  background-size: cover;
+  color: #fff;
+  padding: 24px;
+}
+
+#crew body {
+  background: #0b0d17 url("../images/crew/background-crew-mobile.jpg") no-repeat center top;
+  background-size: cover;
+  color: #fff;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo img {
+  width: 40px;
+}
+.header-menu ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 254px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(35px);
+  padding-top: 118px;
+}
+.header-menu ul img {
+  position: absolute;
+  top: 34px;
+  right: 24px;
+}
+.header-menu ul li {
+  margin: 0 0 32px 32px;
+  text-align: left;
+}
+.header-menu ul li a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2.7px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.header-menu .active {
+  border-right: 4px solid #fff;
+}
+
+.main {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-subtitle {
+  margin-top: 24px;
+}
+.main-title {
+  margin: 16px 0;
+}
+.main-title span {
+  opacity: 25%;
+}
+.main-btn {
+  margin: 81px auto 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+}
+.main-btn h4 {
+  color: #0b0d17;
+}
+.main-btn:hover {
+  outline: 30px solid rgba(151, 151, 151, 0.4117647059);
+  transition: 0.3s;
+}
+.main-intro {
+  margin-top: 32px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.main-intro-img-small {
+  width: 170px;
+}
+.main-intro-img-middle {
+  width: 223px;
+}
+.main-info {
+  display: flex;
+  flex-direction: column;
+}
+.main-info-menu {
+  margin-bottom: 20px;
+}
+.main-info ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 27px;
+}
+.main-info ul li {
+  padding-bottom: 8px;
+}
+.main-info ul li:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+.main-info ul .active {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+.main-info-distance {
+  margin-top: 32px;
+  margin-bottom: 50px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.main-info-distance h4 {
+  margin-bottom: 15px;
+}
 
 /*# sourceMappingURL=style.css.map */
