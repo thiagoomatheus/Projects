@@ -6,7 +6,15 @@
     text-decoration: none
     list-style: none
     box-sizing: border-box
-    border: 1px solid red
+
+html
+    overflow-x: hidden
+
+    &::-webkit-scrollbar
+        width: 3px
+
+        &:hover
+            background: #ffffff1f
 
 p
     @include variables.font-secundary(15px, 0.5px, variables.$secundary-color)
@@ -27,7 +35,7 @@ h2
     @include variables.font-primary(56px)
 
 h3
-    @include variables.font-primary(32px)
+    @include variables.font-primary(24px)
 
 h4
     @include variables.font-secundary(16px, 2.7px, variables.$primary-color)
@@ -48,18 +56,6 @@ h5
 
 .hidden
     display: none
-
-#home
-    & body
-        @include variables.body(home, mobile)
-
-#destination
-    & body
-        @include variables.body(destination, mobile)
-
-#crew
-    & body
-        @include variables.body(crew, mobile)
 
 .header
     display: flex
@@ -98,10 +94,11 @@ h5
             border-right: 4px solid variables.$primary-color
 
 .main
-    margin-top: 24px
     display: flex
     flex-direction: column
     justify-content: center
+    margin-top: 24px
+    margin-bottom: 32px
 
     &-subtitle
         margin-top: 24px
@@ -109,8 +106,9 @@ h5
     &-title
         margin: 16px 0
 
-        & span
-            opacity: 25%
+    & h4 
+        & .strong
+            opacity: 0.25
 
     &-btn
         margin: 81px auto 0 auto
@@ -132,11 +130,6 @@ h5
         margin-bottom: 30px
         display: flex
         justify-content: center
-
-        &-img-small
-            width: 170px
-        &-img-middle
-            width: 223px
 
     &-info
         display: flex
@@ -173,3 +166,82 @@ h5
 
             & h4
                 margin-bottom: 15px
+
+        & h4
+            @include variables.font-primary(16px)
+            opacity: 0.5
+            margin-bottom: 8px
+        
+        & h3
+            margin-bottom: 20px
+
+    &-menu ul
+        display: flex
+        flex-direction: row
+        justify-content: center
+        column-gap: 16px
+        margin-bottom: 32px
+
+
+#home
+    & body
+        @include variables.body(home, mobile)
+
+#destination
+    & body
+        @include variables.body(destination, mobile)
+
+    & .main-intro-img
+            width: 170px
+
+#crew
+    & body
+        @include variables.body(crew, mobile)
+
+    & .main-intro-img
+            width: 223px
+    
+    & .main-menu
+        & li
+            width: 10px
+            height: 10px
+            background: variables.$primary-color
+            border-radius: 50%
+            opacity: 0.17
+
+            &:hover
+                opacity: 0.5
+                cursor: pointer
+
+        & .active
+            opacity: 1
+            
+        & span
+            display: none
+
+#technology
+    & body
+        @include variables.body(technology, mobile)
+
+    & .main-intro-img
+            width: 105vw
+            height: 170px
+
+    & .main-menu
+        & li
+            @include variables.font-primary(16px)
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            border: 1px solid rgba(255, 255, 255, 0.25)
+            display: flex
+            justify-content: center
+            align-items: center
+
+            &:hover
+                border: 1px solid variables.$primary-color
+                cursor: pointer
+
+        & .active
+            background: variables.$primary-color
+            color: variables.$bg-color
