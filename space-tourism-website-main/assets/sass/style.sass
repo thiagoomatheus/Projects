@@ -23,7 +23,7 @@ p
 
 li
     @include variables.font-secundary(14px, 2.36px, variables.$secundary-color)
-    
+    cursor: pointer  
 
 h1,h2,h3,h4,h5,li
     text-transform: uppercase
@@ -68,6 +68,9 @@ h5
 
     &-menu
 
+        & img
+            cursor: pointer
+
         & ul
             position: absolute
             right: 0
@@ -82,10 +85,14 @@ h5
                 position: absolute
                 top: 34px
                 right: 24px
+                cursor: pointer
 
             & li
                 margin: 0 0 32px 32px
                 text-align: left
+
+                &:hover
+                    border-right: 4px solid rgba(255, 255, 255, 0.5)
 
                 & a
                     @include variables.font-secundary(18px, 2.7px, variables.$primary-color)
@@ -187,7 +194,7 @@ h5
     & body
         @include variables.body(home, mobile)
 
-#destination
+#destinations
     & body
         @include variables.body(destination, mobile)
 
@@ -199,7 +206,8 @@ h5
         @include variables.body(crew, mobile)
 
     & .main-intro-img
-            width: 223px
+            height: 223px
+
     
     & .main-menu
         & li
