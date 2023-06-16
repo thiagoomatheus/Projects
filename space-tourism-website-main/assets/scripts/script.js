@@ -12,10 +12,10 @@ let menuItem2 = li[1]
 let menuItem3 = li[2]
 let menuItem4 = li[3]
 
-const infoImg = document.querySelector(".main-intro img")
-const infoTitle = document.querySelector(".main-info-title")
-const infoSubtitle = document.querySelector(".main-info-subtitle")
-const infoDescription = document.querySelector(".main-info-description")
+const infoImg = document.querySelector(".main-content-intro img")
+const infoTitle = document.querySelector(".main-content-info-title")
+const infoSubtitle = document.querySelector(".main-content-info-subtitle")
+const infoDescription = document.querySelector(".main-content-info-description")
 const infoDistance = document.querySelector("#distance")
 const infoTravel = document.querySelector("#travel")
 
