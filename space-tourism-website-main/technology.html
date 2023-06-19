@@ -27,7 +27,11 @@
     <h4 class="main-title"><span class="strong">03</span> Space Launch 101</h4>
     <section class="main-content">
       <section class="main-content-intro">
-          <img class="main-content-intro-img" src="assets/images/technology/image-launch-vehicle-landscape.jpg" alt="Launch Vehicle">
+          <picture>
+            <source id="portrait" media="(min-width: 1024px)" srcset="assets/images/technology/image-launch-vehicle-portrait.jpg">
+            <source id="landscape" media="(max-width: 1023px)" srcset="assets/images/technology/image-launch-vehicle-landscape.jpg">
+            <img class="main-content-intro-img" src="assets/images/technology/image-launch-vehicle-landscape.jpg" alt="Launch Vehicle">
+          </picture>
       </section>
       <nav class="main-menu">
           <ul>

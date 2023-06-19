@@ -13,6 +13,8 @@ let menuItem3 = li[2]
 let menuItem4 = li[3]
 
 const infoImg = document.querySelector(".main-content-intro img")
+const technologyImgPortrait = document.querySelector("#portrait")
+const technologyImgLandscape = document.querySelector("#landscape")
 const infoTitle = document.querySelector(".main-content-info-title")
 const infoSubtitle = document.querySelector(".main-content-info-subtitle")
 const infoDescription = document.querySelector(".main-content-info-description")
@@ -77,7 +79,8 @@ async function changeSelectItemInMenu(i) {
     else if (page === "technology"){
         const technology = data.technology
 
-        infoImg.setAttribute("src", technology[i].images.landscape)
+        technologyImgLandscape.setAttribute("srcset", technology[i].images.landscape)
+        technologyImgPortrait.setAttribute("srcset", technology[i].images.portrait)
         infoTitle.textContent = `${technology[i].name}`;
         infoDescription.textContent = `${technology[i].description}`;
     }

@@ -5,8 +5,7 @@
     padding: 0
     text-decoration: none
     list-style: none
-    box-sizing: border-box
-
+    box-sizing: border-box 
 
 html
     overflow-x: hidden
@@ -25,11 +24,20 @@ p
     @include variables.tablet
         @include variables.font-secundary(16px, 0px, variables.$secundary-color)
         line-height: 28px
-        padding: 3px
+        margin: 0 5px
+
+    @include variables.desktop
+        text-align: left
+        font-size: 18px
+        line-height: 32px
 
 li
     @include variables.font-secundary(14px, 2.36px, variables.$secundary-color)
-    cursor: pointer  
+    cursor: pointer
+
+    @include variables.tablet
+            font-size: 16px
+            letter-spacing: 2.7px
 
 h1,h2,h3,h4,h5,li
     text-transform: uppercase
@@ -42,6 +50,9 @@ h1
 
 h2
     @include variables.font-primary(56px)
+    
+    @include variables.tablet
+        font-size: 100px
 
 h3
     @include variables.font-primary(24px)
@@ -61,6 +72,10 @@ h5
     @include variables.tablet
         font-size: 20px
 
+    @include variables.desktop
+        font-size: 28px
+        letter-spacing: 4.72px
+
 .subheading
     &-1
         @include variables.font-primary(28px)
@@ -72,6 +87,9 @@ h5
 
         @include variables.tablet
             font-size: 16px
+
+        @include variables.desktop
+            text-align: left
 
 .strong
     font-weight: bold
@@ -86,7 +104,6 @@ h5
     align-items: center
 
     &-logo
-
         width: 40px
         height: 40px
 
@@ -125,6 +142,10 @@ h5
                 flex-direction: row
                 justify-content: space-between
 
+            @include variables.desktop
+                top: 40px
+                width: 60vw
+
             & img
                 position: absolute
                 top: 34px
@@ -147,6 +168,9 @@ h5
 
                     @include variables.tablet
                         display: none
+                    
+                    @include variables.desktop
+                        display: inline
 
                 &:hover
                     border-right: 4px solid rgba(255, 255, 255, 0.5)
@@ -162,6 +186,9 @@ h5
                         @include variables.font-secundary(14px, 2.36px, variables.$primary-color)
                         padding: 40px 0
 
+                    @include variables.desktop
+                        font-size: 16px
+
         & .active
             border-right: 4px solid variables.$primary-color
 
@@ -171,7 +198,9 @@ h5
 
 .main
 
-    border: 1px solid red
+    @include variables.desktop
+        width: 80vw
+        margin: 0 auto
 
     &-title
         margin-top: 24px
@@ -180,6 +209,11 @@ h5
             margin-top: 40px
             font-size: 24px
             text-align: left
+
+        @include variables.desktop
+            margin-top: 76px
+            font-size: 28px
+            letter-spacing: 4.72px
 
         & .strong
             opacity: 0.25
@@ -190,11 +224,15 @@ h5
         justify-content: center
         margin-top: 32px
         margin-bottom: 32px
-        border: 1px solid red
 
         @include variables.tablet
             width: 458px
             margin: 60px auto 48px auto
+
+        @include variables.desktop
+            flex-direction: row
+            align-items: flex-end
+            justify-content: space-between
 
         &-subtitle
             margin-top: 24px
@@ -214,6 +252,10 @@ h5
                 margin-top: 156px
                 width: 242px
                 height: 242px
+
+            @include variables.desktop
+                width: 274px
+                height: 274px
             
             & h4
                 color: variables.$bg-color
@@ -221,6 +263,12 @@ h5
             &:hover
                 outline: 30px solid #97979769
                 transition: 0.3s
+
+                @include variables.tablet
+                    outline-width: 40px
+
+                @include variables.desktop
+                    outline-width: 50px
 
         &-intro
             display: flex
@@ -233,6 +281,11 @@ h5
         &-info
             display: flex
             flex-direction: column
+
+            &-title
+                @include variables.desktop
+                    font-size: 56px
+                    text-align: left
 
             & ul
                 display: flex
@@ -266,6 +319,9 @@ h5
                     justify-content: center
                     column-gap: 50px
 
+                @include variables.desktop
+                    margin: 0
+
             & h4
                 @include variables.font-primary(16px)
                 opacity: 0.5
@@ -284,6 +340,9 @@ h5
         @include variables.tablet
             margin-bottom: 32px
 
+        @include variables.desktop
+            column-gap: 36px
+
 #home
     & body
         @include variables.body(home, mobile)
@@ -292,9 +351,29 @@ h5
             @include variables.body(home, tablet)
             padding: 0 39px
 
+        @include variables.desktop
+            @include variables.body(home, desktop)
+            padding: 40px 55px
+
     & .main-content
         @include variables.tablet
             margin-top: 106px
+        
+        @include variables.desktop
+            margin-top: 24vh
+            width: 100%
+
+        & div
+            @include variables.desktop
+                width: 450px
+            
+            & h5
+                @include variables.desktop
+                    text-align: left
+
+        &-btn
+            @include variables.desktop 
+                margin: 0
 
 #destinations
     & body
@@ -304,15 +383,43 @@ h5
             @include variables.body(destination, tablet)
             padding: 0 39px
 
+        @include variables.desktop
+            @include variables.body(destination, desktop)
+            padding: 40px 55px
+
     & .main-content
         @include variables.tablet
             width: 573px
 
-        &-intro-img
+        @include variables.desktop
+            width: 80vw
+            margin-top: 64px
+
+        &-intro
+
+            @include variables.desktop
+                margin: 0
+
+            &-img
                 width: 170px
 
                 @include variables.tablet
                     width: 300px
+
+                @include variables.desktop
+                    min-width: 32vw
+                    max-width: 445px
+
+        &-info
+            @include variables.desktop
+                min-width: 30vw
+                max-width: 445px
+                min-height: 67vh
+                max-height: 472px
+                justify-content: space-between
+
+            &-title
+                font-size: 100px
 
 #crew
     & body
@@ -322,14 +429,24 @@ h5
             @include variables.body(crew, tablet)
             padding: 0 39px
 
+        @include variables.desktop
+            @include variables.body(crew, desktop)
+            padding: 40px 55px 0 55px
+
     & .main-content
 
         @include variables.tablet
             margin-bottom: 0
 
+        @include variables.desktop
+            margin-top: 154px
+            min-height: 400px
+            max-height: 500px
+            width: 100%
+
         &-intro
             @include variables.tablet
-                order: 3
+                order: 2
                 margin: 0
 
             &-img
@@ -338,17 +455,45 @@ h5
                 @include variables.tablet
                     height: 532px
 
+                @include variables.desktop
+                    min-height: 95vh
+                    max-height: 702px
+
+        & div 
+
+            @include variables.desktop
+                display: flex
+                flex-direction: column
+                justify-content: end
+
         &-info
             @include variables.tablet
                 order: 1
             
+            @include variables.desktop
+                height: 400px
+
             & h4
                 font-size: 24px
+
+                @include variables.desktop
+                    text-align: left
+                    font-size: 32px
+
+            &-description
+                @include variables.desktop
+                    width: 444px
+                    margin: 0
+                    padding: 0
         
     & .main-menu
         @include variables.tablet
             order: 2
-            margin: 40px 0 8px 0
+            margin: 70px 0 8px 0
+
+        & ul
+            @include variables.desktop
+                justify-content: flex-start
 
         & li
             width: 10px
@@ -356,6 +501,10 @@ h5
             background: variables.$primary-color
             border-radius: 50%
             opacity: 0.17
+
+            @include variables.desktop
+                width: 15px
+                height: 15px
 
             &:hover
                 opacity: 0.5
@@ -375,14 +524,53 @@ h5
             @include variables.body(technology, tablet)
             padding: 0 39px
 
-    & .main-content-intro-img
-            min-width: 100vw
-            height: 170px
+        @include variables.desktop
+            @include variables.body(technology, desktop)
+            padding: 40px 55px
 
-            @include variables.tablet
-                height: 310px
+    & .main
+        @include variables.desktop
+            width: 90vw
+            margin: 0 0 0 5.5vw
+        
+        &-content
+            @include variables.desktop
+                width: 100%
+                align-items: center
+
+            &-intro
+                @include variables.desktop
+                    order: 3
+                
+                &-img
+                    min-width: 100vw
+                    max-width: 105vw
+                    height: 170px
+
+                    @include variables.tablet
+                        height: 310px
+
+                    @include variables.desktop
+                        min-width: 40vw
+                        max-width: 515px
+                        height: 527px
+
+            &-info
+                @include variables.desktop
+                    width: 444px
+                    order: 2
 
     & .main-menu
+        @include variables.desktop
+            order: 1
+
+        & ul
+
+            @include variables.desktop
+                flex-direction: column
+                row-gap: 32px
+                margin: 0
+
         & li
             @include variables.font-primary(16px)
             width: 40px
@@ -390,6 +578,7 @@ h5
             border-radius: 50%
             border: 1px solid rgba(255, 255, 255, 0.25)
             display: flex
+            flex-direction: column
             justify-content: center
             align-items: center
 
@@ -397,6 +586,11 @@ h5
                 height: 60px
                 width: 60px
                 font-size: 24px
+
+            @include variables.tablet
+                height: 80px
+                width: 80px
+                font-size: 32px
 
             &:hover
                 border: 1px solid variables.$primary-color
