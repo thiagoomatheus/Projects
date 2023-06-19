@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap')
+    
+$bg-color: #0b0d17
+$primary-color: #fff
+$secundary-color:#D0D6F9
+$font-primary: 'Bellefair', serif
+$font-secundary: 'Barlow Condensed', sans-serif
+
+@mixin font-primary($size)
+    font-family: $font-primary
+    font-size: #{$size}
+    color: $primary-color
+    font-weight: 300
+    text-align: center
+
+@mixin font-secundary($size, $spacing, $color)
+    font-family: $font-secundary
+    font-size: #{$size}
+    letter-spacing: #{$spacing}
+    color: #{$color}
+    font-weight: 500
+    text-align: center
+
+@mixin body($page, $screen)
+    background: $bg-color url("../images/#{$page}/background-#{$page}-#{$screen}.jpg") no-repeat center top
+    background-size: cover
+    color: $primary-color
+    padding: 24px
+
+@mixin tablet
+    @media screen and (min-width: 768px)
+        @content
+    
+@mixin desktop
+    @media screen and (min-width: 1024px)
+        @content
+    
+    

@@ -1,0 +1,601 @@
+@use 'variables'
+    
+*
+    margin: 0
+    padding: 0
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box 
+
+html
+    overflow-x: hidden
+
+    &::-webkit-scrollbar
+        width: 3px
+
+        &:hover
+            background: #ffffff1f
+
+p
+    @include variables.font-secundary(15px, 0.5px, variables.$secundary-color)
+    line-height: 24px
+    padding: 5px
+
+    @include variables.tablet
+        @include variables.font-secundary(16px, 0px, variables.$secundary-color)
+        line-height: 28px
+        margin: 0 5px
+
+    @include variables.desktop
+        text-align: left
+        font-size: 18px
+        line-height: 32px
+
+li
+    @include variables.font-secundary(14px, 2.36px, variables.$secundary-color)
+    cursor: pointer
+
+    @include variables.tablet
+            font-size: 16px
+            letter-spacing: 2.7px
+
+h1,h2,h3,h4,h5,li
+    text-transform: uppercase
+
+h1
+    @include variables.font-primary(80px)
+    
+    @include variables.tablet
+        font-size: 150px
+
+h2
+    @include variables.font-primary(56px)
+    
+    @include variables.tablet
+        font-size: 100px
+
+h3
+    @include variables.font-primary(24px)
+
+    @include variables.tablet
+        font-size: 40px
+
+h4
+    @include variables.font-secundary(16px, 2.7px, variables.$primary-color)
+
+    @include variables.tablet
+        font-size: 32px
+
+h5
+    @include variables.font-secundary(16px, 2.7px, variables.$secundary-color)
+
+    @include variables.tablet
+        font-size: 20px
+
+    @include variables.desktop
+        font-size: 28px
+        letter-spacing: 4.72px
+
+.subheading
+    &-1
+        @include variables.font-primary(28px)
+        text-transform: uppercase
+
+    &-2
+        @include variables.font-secundary(14px, 2.36px, variables.$secundary-color)
+        text-transform: uppercase
+
+        @include variables.tablet
+            font-size: 16px
+
+        @include variables.desktop
+            text-align: left
+
+.strong
+    font-weight: bold
+    margin-right: 5px
+
+.hidden
+    display: none
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &-logo
+        width: 40px
+        height: 40px
+
+        @include variables.tablet
+            margin: 24px 0
+            width: 48px
+            height: 48px
+
+        & img, a
+            width: 100%
+            height: 100%
+
+    &-menu
+
+        & img
+            cursor: pointer
+
+            @include variables.tablet
+                display: none
+
+        & ul
+            position: absolute
+            right: 0
+            top: 0
+            height: 100vh
+            width: 254px
+            background: rgba(255, 255, 255, 0.04)
+            backdrop-filter: blur(35px)
+            padding-top: 118px
+
+            @include variables.tablet
+                height: 96px
+                width: 450px
+                padding: 0 48px
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+
+            @include variables.desktop
+                top: 40px
+                width: 60vw
+
+            & img
+                position: absolute
+                top: 34px
+                right: 24px
+                cursor: pointer
+
+                @include variables.tablet
+                    display: none
+
+            & li
+                margin: 0 0 32px 32px
+                text-align: left
+
+                @include variables.tablet
+                    margin: 0
+                    display: flex
+                    align-items: center
+
+                & span
+
+                    @include variables.tablet
+                        display: none
+                    
+                    @include variables.desktop
+                        display: inline
+
+                &:hover
+                    border-right: 4px solid rgba(255, 255, 255, 0.5)
+
+                    @include variables.tablet
+                        border-right: none
+                        box-shadow: 0px 3px 0 0 rgba(255, 255, 255, 0.5)
+
+                & a
+                    @include variables.font-secundary(18px, 2.7px, variables.$primary-color)
+
+                    @include variables.tablet
+                        @include variables.font-secundary(14px, 2.36px, variables.$primary-color)
+                        padding: 40px 0
+
+                    @include variables.desktop
+                        font-size: 16px
+
+        & .active
+            border-right: 4px solid variables.$primary-color
+
+            @include variables.tablet
+                border-right: none
+                box-shadow: 0px 3px 0 0 variables.$primary-color
+
+.main
+
+    @include variables.desktop
+        width: 80vw
+        margin: 0 auto
+
+    &-title
+        margin-top: 24px
+
+        @include variables.tablet
+            margin-top: 40px
+            font-size: 24px
+            text-align: left
+
+        @include variables.desktop
+            margin-top: 76px
+            font-size: 28px
+            letter-spacing: 4.72px
+
+        & .strong
+            opacity: 0.25
+
+    &-content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-top: 32px
+        margin-bottom: 32px
+
+        @include variables.tablet
+            width: 458px
+            margin: 60px auto 48px auto
+
+        @include variables.desktop
+            flex-direction: row
+            align-items: flex-end
+            justify-content: space-between
+
+        &-subtitle
+            margin-top: 24px
+
+        &-title
+            margin: 16px 0
+
+        &-btn
+            margin: 81px auto 0 auto
+            width: 170px
+            height: 170px
+            border-radius: 50%
+            border: none
+            background: variables.$primary-color
+
+            @include variables.tablet
+                margin-top: 156px
+                width: 242px
+                height: 242px
+
+            @include variables.desktop
+                width: 274px
+                height: 274px
+            
+            & h4
+                color: variables.$bg-color
+            
+            &:hover
+                outline: 30px solid #97979769
+                transition: 0.3s
+
+                @include variables.tablet
+                    outline-width: 40px
+
+                @include variables.desktop
+                    outline-width: 50px
+
+        &-intro
+            display: flex
+            justify-content: center
+            margin-bottom: 26px
+
+            @include variables.tablet
+                margin-bottom: 53px
+
+        &-info
+            display: flex
+            flex-direction: column
+
+            &-title
+                @include variables.desktop
+                    font-size: 56px
+                    text-align: left
+
+            & ul
+                display: flex
+                flex-direction: row
+                justify-content: center
+                column-gap: 27px
+
+                & li
+                    padding-bottom: 8px
+
+                    &:hover
+                        border-bottom: 3px solid rgba(255, 255, 255, 0.5)
+
+                & .active
+                    color: variables.$primary-color
+                    border-bottom: 3px solid variables.$primary-color
+
+            &-distance
+                margin-top: 32px
+                margin-bottom: 24px
+                padding-top: 32px
+                border-top: 1px solid rgba(255, 255, 255, 0.5)
+                display: flex
+                flex-direction: column
+                row-gap: 32px
+
+                @include variables.tablet
+                    margin-top: 49px
+                    padding-top: 28px
+                    flex-direction: row
+                    justify-content: center
+                    column-gap: 50px
+
+                @include variables.desktop
+                    margin: 0
+
+            & h4
+                @include variables.font-primary(16px)
+                opacity: 0.5
+                margin-bottom: 8px
+            
+            & h3
+                margin-bottom: 20px
+
+    &-menu ul
+        display: flex
+        flex-direction: row
+        justify-content: center
+        column-gap: 16px
+        margin-bottom: 20px
+
+        @include variables.tablet
+            margin-bottom: 32px
+
+        @include variables.desktop
+            column-gap: 36px
+
+#home
+    & body
+        @include variables.body(home, mobile)
+
+        @include variables.tablet
+            @include variables.body(home, tablet)
+            padding: 0 39px
+
+        @include variables.desktop
+            @include variables.body(home, desktop)
+            padding: 40px 55px
+
+    & .main-content
+        @include variables.tablet
+            margin-top: 106px
+        
+        @include variables.desktop
+            margin-top: 24vh
+            width: 100%
+
+        & div
+            @include variables.desktop
+                width: 450px
+            
+            & h5
+                @include variables.desktop
+                    text-align: left
+
+        &-btn
+            @include variables.desktop 
+                margin: 0
+
+#destinations
+    & body
+        @include variables.body(destination, mobile)
+
+        @include variables.tablet
+            @include variables.body(destination, tablet)
+            padding: 0 39px
+
+        @include variables.desktop
+            @include variables.body(destination, desktop)
+            padding: 40px 55px
+
+    & .main-content
+        @include variables.tablet
+            width: 573px
+
+        @include variables.desktop
+            width: 80vw
+            margin-top: 64px
+
+        &-intro
+
+            @include variables.desktop
+                margin: 0
+
+            &-img
+                width: 170px
+
+                @include variables.tablet
+                    width: 300px
+
+                @include variables.desktop
+                    min-width: 32vw
+                    max-width: 445px
+
+        &-info
+            @include variables.desktop
+                min-width: 30vw
+                max-width: 445px
+                min-height: 67vh
+                max-height: 472px
+                justify-content: space-between
+
+            &-title
+                font-size: 100px
+
+#crew
+    & body
+        @include variables.body(crew, mobile)
+
+        @include variables.tablet
+            @include variables.body(crew, tablet)
+            padding: 0 39px
+
+        @include variables.desktop
+            @include variables.body(crew, desktop)
+            padding: 40px 55px 0 55px
+
+    & .main-content
+
+        @include variables.tablet
+            margin-bottom: 0
+
+        @include variables.desktop
+            margin-top: 154px
+            min-height: 400px
+            max-height: 500px
+            width: 100%
+
+        &-intro
+            @include variables.tablet
+                order: 2
+                margin: 0
+
+            &-img
+                height: 223px
+
+                @include variables.tablet
+                    height: 532px
+
+                @include variables.desktop
+                    min-height: 95vh
+                    max-height: 702px
+
+        & div 
+
+            @include variables.desktop
+                display: flex
+                flex-direction: column
+                justify-content: end
+
+        &-info
+            @include variables.tablet
+                order: 1
+            
+            @include variables.desktop
+                height: 400px
+
+            & h4
+                font-size: 24px
+
+                @include variables.desktop
+                    text-align: left
+                    font-size: 32px
+
+            &-description
+                @include variables.desktop
+                    width: 444px
+                    margin: 0
+                    padding: 0
+        
+    & .main-menu
+        @include variables.tablet
+            order: 2
+            margin: 70px 0 8px 0
+
+        & ul
+            @include variables.desktop
+                justify-content: flex-start
+
+        & li
+            width: 10px
+            height: 10px
+            background: variables.$primary-color
+            border-radius: 50%
+            opacity: 0.17
+
+            @include variables.desktop
+                width: 15px
+                height: 15px
+
+            &:hover
+                opacity: 0.5
+                cursor: pointer
+
+        & .active
+            opacity: 1
+            
+        & span
+            display: none
+
+#technology
+    & body
+        @include variables.body(technology, mobile)
+
+        @include variables.tablet
+            @include variables.body(technology, tablet)
+            padding: 0 39px
+
+        @include variables.desktop
+            @include variables.body(technology, desktop)
+            padding: 40px 55px
+
+    & .main
+        @include variables.desktop
+            width: 90vw
+            margin: 0 0 0 5.5vw
+        
+        &-content
+            @include variables.desktop
+                width: 100%
+                align-items: center
+
+            &-intro
+                @include variables.desktop
+                    order: 3
+                
+                &-img
+                    min-width: 100vw
+                    max-width: 105vw
+                    height: 170px
+
+                    @include variables.tablet
+                        height: 310px
+
+                    @include variables.desktop
+                        min-width: 40vw
+                        max-width: 515px
+                        height: 527px
+
+            &-info
+                @include variables.desktop
+                    width: 444px
+                    order: 2
+
+    & .main-menu
+        @include variables.desktop
+            order: 1
+
+        & ul
+
+            @include variables.desktop
+                flex-direction: column
+                row-gap: 32px
+                margin: 0
+
+        & li
+            @include variables.font-primary(16px)
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            border: 1px solid rgba(255, 255, 255, 0.25)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            @include variables.tablet
+                height: 60px
+                width: 60px
+                font-size: 24px
+
+            @include variables.tablet
+                height: 80px
+                width: 80px
+                font-size: 32px
+
+            &:hover
+                border: 1px solid variables.$primary-color
+                cursor: pointer
+
+        & .active
+            background: variables.$primary-color
+            color: variables.$bg-color
