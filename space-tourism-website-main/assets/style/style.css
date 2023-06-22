@@ -537,8 +537,8 @@ h1, h2, h3, h4, h5, li, .subheading-1, .subheading-2 {
 }
 @media screen and (min-width: 1024px) {
   #destinations .main-content-info {
-    max-width: 390px;
-    max-height: 472px;
+    min-width: 390px;
+    min-height: 445px;
     justify-content: space-between;
   }
 }
@@ -582,7 +582,7 @@ h1, h2, h3, h4, h5, li, .subheading-1, .subheading-2 {
 @media screen and (min-width: 1024px) {
   #destinations .main-content-info-distance {
     justify-content: flex-start;
-    margin: 0;
+    margin: 54px 0 0 0;
   }
 }
 @media screen and (min-width: 768px) {

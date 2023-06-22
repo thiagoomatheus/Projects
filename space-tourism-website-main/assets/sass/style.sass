@@ -368,8 +368,8 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
 
         &-info
             @include variables.desktop
-                max-width: 390px
-                max-height: 472px
+                min-width: 390px
+                min-height: 445px
                 justify-content: space-between
 
             &-title
@@ -405,8 +405,7 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
 
                 @include variables.desktop
                     justify-content: flex-start
-                    margin: 0 
-
+                    margin: 54px 0 0 0
                 & div
                     @include variables.tablet
                         width: 216px
@@ -560,7 +559,6 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
                     @include variables.tablet
                         min-height: 310px
                         max-height: 350px
-
                     @include variables.desktop           
                         min-height: 400px
                         max-height: 527px
