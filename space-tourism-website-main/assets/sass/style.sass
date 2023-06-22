@@ -234,12 +234,12 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
         flex-direction: column
         justify-content: center
         margin: 0 auto
-        min-width: 320px
+        min-width: 240px
         max-width: 450px
 
         @include variables.tablet
-            min-width: 458px
-            max-width: 55%
+            min-width: 500px
+            max-width: 60%
 
         @include variables.desktop
             max-width: 1110px
@@ -349,12 +349,11 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
 
     & .main-content
         @include variables.tablet
-            min-width: none
-            max-width: none
-            width: 573px
+            min-width: 573px
 
         @include variables.desktop
             width: 100%
+            column-gap: 15px
             margin-top: 64px
 
         &-intro
@@ -369,13 +368,24 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
 
         &-info
             @include variables.desktop
-                max-width: 445px
+                max-width: 390px
                 max-height: 472px
                 justify-content: space-between
 
             &-title
                 @include variables.desktop
                     margin: 37px 0 14px 0
+
+            &-description
+                @include variables.tablet
+                    height: 84px
+                    
+                @include variables.desktop
+                    height: 128px
+                    min-width: 350px
+                    max-width: 444px
+                    margin: 0
+                    padding: 0
 
             &-distance
                 margin-top: 32px
@@ -391,11 +401,15 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
                     padding-top: 28px
                     flex-direction: row
                     justify-content: center
-                    column-gap: 50px
+                    column-gap: 11px
 
                 @include variables.desktop
                     justify-content: flex-start
-                    margin: 0
+                    margin: 0 
+
+                & div
+                    @include variables.tablet
+                        width: 216px
 
     & .main-menu ul
         column-gap: 26px
@@ -471,7 +485,10 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
                         margin: 15px 0 27px 0
 
                 &-description
+                    @include variables.tablet
+                        height: 84px
                     @include variables.desktop
+                        height: 128px
                         min-width: 350px
                         max-width: 444px
                         margin: 0
@@ -524,6 +541,8 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
             margin-right: -3vw
         
         &-content
+            @include variables.tablet
+                min-width: 458px
             @include variables.desktop
                 max-width: none
                 align-items: center
@@ -555,12 +574,13 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
                     order: 1
                     flex-direction: row
                     justify-content: space-between
+                    column-gap: 15px
                     width: 630px
                     height: 303px
 
                 & .main-content-info
                     @include variables.desktop
-                        width: 480px
+                        width: 475px
 
                     &-title
                         margin: 9px 0 16px 0
