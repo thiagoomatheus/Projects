@@ -1,0 +1,87 @@
+@use 'variables'
+
+body
+    @include variables.body-mobile(destination)
+
+    @include variables.tablet
+        @include variables.body-tablet(destination)
+
+    @include variables.desktop
+        @include variables.body-desktop(destination)
+
+.main-content
+    @include variables.tablet
+        min-width: 573px
+
+    @include variables.desktop
+        width: 100%
+        column-gap: 15px
+        margin-top: 64px
+
+    &-intro
+        &-img
+            width: 170px
+
+            @include variables.tablet
+                width: 300px
+
+            @include variables.desktop
+                width: 445px                   
+
+    &-info
+        @include variables.desktop
+            min-width: 390px
+            min-height: 445px
+            justify-content: space-between
+
+        &-title
+            @include variables.desktop
+                margin: 37px 0 14px 0
+
+        &-description
+            @include variables.tablet
+                height: 84px
+                
+            @include variables.desktop
+                height: 128px
+                min-width: 350px
+                max-width: 444px
+                margin: 0
+                padding: 0
+
+        &-distance
+            margin-top: 32px
+            margin-bottom: 24px
+            padding-top: 32px
+            border-top: 1px solid rgba(255, 255, 255, 0.5)
+            @include variables.flex-column(center, center)
+            row-gap: 32px
+
+            @include variables.tablet
+                margin-top: 49px
+                padding-top: 28px
+                @include variables.flex-row(center, none)
+                column-gap: 11px
+
+            @include variables.desktop
+                justify-content: flex-start
+                margin: 54px 0 0 0
+
+            & div
+                @include variables.tablet
+                    width: 216px
+
+.main-menu ul
+    column-gap: 26px
+    margin: 26px 0 20px 0
+
+    @include variables.tablet
+        column-gap: 35px
+        margin: 53px 0 32px 0
+
+        @include variables.desktop
+            justify-content: flex-start
+            margin: 0
+
+        & li
+            padding-bottom: 8px

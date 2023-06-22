@@ -20,6 +20,7 @@ p
     @include variables.font-secundary(15px, 0px, variables.$secundary-color)
     line-height: 25px
     padding: 3px
+    text-transform: none
 
     @include variables.tablet
         font-size: 16px
@@ -27,7 +28,6 @@ p
         margin: 0 5px
 
     @include variables.desktop
-        text-align: left
         font-size: 18px
         line-height: 32px
 
@@ -38,6 +38,9 @@ li
     @include variables.tablet
             font-size: 16px
             letter-spacing: 2.7px
+    
+    @include variables.desktop
+        text-align: left
 
 h1
     @include variables.font-primary(80px)
@@ -89,23 +92,6 @@ h5
     &-2
         @include variables.font-secundary(14px, 2.36px, variables.$secundary-color)
 
-.btn-text
-    text-transform: uppercase
-    font-family: variables.$font-primary
-    color: variables.$bg-color
-    font-size: 20px
-    letter-spacing: 1.25px
-
-    @include variables.tablet
-        font-size: 32px
-        letter-spacing: 2px
-
-h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
-    text-transform: uppercase
-
-    @include variables.desktop
-        text-align: left
-
 .strong
     font-weight: bold
     margin-right: 5px
@@ -114,9 +100,7 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
     display: none
 
 .header
-    display: flex
-    justify-content: space-between
-    align-items: center
+    @include variables.flex-row(space-between, center)
 
     &-logo
         width: 40px
@@ -152,9 +136,7 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
                 height: 96px
                 width: 450px
                 padding: 0 48px
-                display: flex
-                flex-direction: row
-                justify-content: space-between
+                @include variables.flex-row(space-between, none)
 
             @include variables.desktop
                 top: 40px
@@ -175,8 +157,7 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
 
                 @include variables.tablet
                     margin: 0
-                    display: flex
-                    align-items: center
+                    @include variables.flex-row(center, center)
 
                 & span
 
@@ -230,9 +211,7 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
             opacity: 0.25
 
     &-content
-        display: flex
-        flex-direction: column
-        justify-content: center
+        @include variables.flex-column(center, none)
         margin: 0 auto
         min-width: 240px
         max-width: 450px
@@ -243,17 +222,13 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
 
         @include variables.desktop
             max-width: 1110px
-            flex-direction: row
-            align-items: flex-end
-            justify-content: space-between
+            @include variables.flex-row(space-between, flex-end)
 
         &-intro
-            display: flex
-            justify-content: center
+            @include variables.flex-row(center, none)
 
         &-info
-            display: flex
-            flex-direction: column
+            @include variables.flex-column(none, none)
 
             &-title
                 margin: 0
@@ -262,9 +237,7 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
                 opacity: 0.5
 
     &-menu ul
-        display: flex
-        flex-direction: row
-        justify-content: center
+        @include variables.flex-row(center, center)
         column-gap: 16px
 
         @include variables.desktop
@@ -278,362 +251,3 @@ h1,h2,h3,h4,h5,li,.subheading-1,.subheading-2
         & .active
             color: variables.$primary-color
             border-bottom: 3px solid variables.$primary-color
-
-#home
-    & body
-        @include variables.body-mobile(home)
-
-        @include variables.tablet
-            @include variables.body-tablet(home)
-
-        @include variables.desktop
-            @include variables.body-desktop(home)
-    
-    & .main
-        margin-top: 48px
-
-        @include variables.tablet
-            margin-top: 106px
-            
-        @include variables.desktop
-            margin-top: 24vh
-
-        &-content
-            &-title
-                margin: 16px 0
-
-                @include variables.tablet
-                    margin: 24px 0
-
-            & div
-                @include variables.desktop
-                    width: 450px
-                
-            &-btn
-                margin: 81px auto 0 auto
-                width: 170px
-                height: 170px
-                border-radius: 50%
-                border: none
-                background: variables.$primary-color
-
-                @include variables.tablet
-                    margin-top: 156px
-                    width: 242px
-                    height: 242px
-
-                @include variables.desktop
-                    margin: 0
-                    width: 274px
-                    height: 274px
-                
-                &:hover
-                    outline: 30px solid #97979769
-                    transition: 0.3s
-
-                    @include variables.tablet
-                        outline-width: 40px
-
-                    @include variables.desktop
-                        outline-width: 50px
-
-#destinations
-    & body
-        @include variables.body-mobile(destination)
-
-        @include variables.tablet
-            @include variables.body-tablet(destination)
-
-        @include variables.desktop
-            @include variables.body-desktop(destination)
-
-    & .main-content
-        @include variables.tablet
-            min-width: 573px
-
-        @include variables.desktop
-            width: 100%
-            column-gap: 15px
-            margin-top: 64px
-
-        &-intro
-            &-img
-                width: 170px
-
-                @include variables.tablet
-                    width: 300px
-
-                @include variables.desktop
-                    width: 445px                   
-
-        &-info
-            @include variables.desktop
-                min-width: 390px
-                min-height: 445px
-                justify-content: space-between
-
-            &-title
-                @include variables.desktop
-                    margin: 37px 0 14px 0
-
-            &-description
-                @include variables.tablet
-                    height: 84px
-                    
-                @include variables.desktop
-                    height: 128px
-                    min-width: 350px
-                    max-width: 444px
-                    margin: 0
-                    padding: 0
-
-            &-distance
-                margin-top: 32px
-                margin-bottom: 24px
-                padding-top: 32px
-                border-top: 1px solid rgba(255, 255, 255, 0.5)
-                display: flex
-                flex-direction: column
-                row-gap: 32px
-
-                @include variables.tablet
-                    margin-top: 49px
-                    padding-top: 28px
-                    flex-direction: row
-                    justify-content: center
-                    column-gap: 11px
-
-                @include variables.desktop
-                    justify-content: flex-start
-                    margin: 54px 0 0 0
-                & div
-                    @include variables.tablet
-                        width: 216px
-
-    & .main-menu ul
-        column-gap: 26px
-        margin: 26px 0 20px 0
-
-        @include variables.tablet
-            column-gap: 35px
-            margin: 53px 0 32px 0
-
-        @include variables.desktop
-            justify-content: flex-start
-            margin: 0
-
-        & li
-            padding-bottom: 8px
-
-#crew
-    & body
-        @include variables.body-mobile(crew)
-
-        @include variables.tablet
-            @include variables.body-tablet(crew)
-
-        @include variables.desktop
-            @include variables.body-desktop(crew)
-            padding-bottom: 0
-
-    & .main
-        @include variables.desktop
-            margin-right: 0
-        
-        &-content
-            @include variables.tablet
-                margin-bottom: 0
-                flex-direction: column-reverse
-
-            @include variables.desktop
-                max-width: none
-                margin: 0
-                flex-direction: row-reverse
-
-            &-intro
-                &-img
-                    height: 223px
-
-                    @include variables.tablet
-                        height: 532px
-
-                    @include variables.desktop
-                        height: none
-                        min-width: 300px
-                        max-width: 616px
-
-            & div
-                @include variables.tablet
-                    display: flex
-                    flex-direction: column-reverse
-
-                @include variables.desktop
-                    margin-bottom: 10vh
-                    justify-content: space-between
-                    height: 406px
-
-            &-info
-                @include variables.desktop
-                    display: flex
-                    justify-content: center
-
-                &-title
-                    margin: 8px 0 16px 0
-
-                    @include variables.desktop
-                        margin: 15px 0 27px 0
-
-                &-description
-                    @include variables.tablet
-                        height: 84px
-                    @include variables.desktop
-                        height: 128px
-                        min-width: 350px
-                        max-width: 444px
-                        margin: 0
-                        padding: 0
-        
-    & .main-menu
-        & ul
-            margin: 32px 0
-
-            @include variables.tablet
-                margin: 40px 0
-
-            @include variables.desktop
-                margin: 0
-                justify-content: flex-start
-
-        & li
-            width: 10px
-            height: 10px
-            background: variables.$primary-color
-            border-radius: 50%
-            opacity: 0.17
-
-            @include variables.desktop
-                width: 15px
-                height: 15px
-
-            &:hover
-                opacity: 0.5
-                cursor: pointer
-
-        & .active
-            opacity: 1
-            
-        & span
-            display: none
-
-#technology
-    & body
-        @include variables.body-mobile(technology)
-
-        @include variables.tablet
-            @include variables.body-tablet(technology)
-
-        @include variables.desktop
-            @include variables.body-desktop(technology)
-
-    & .main
-        @include variables.desktop
-            margin-right: -3vw
-        
-        &-content
-            @include variables.tablet
-                min-width: 458px
-            @include variables.desktop
-                max-width: none
-                align-items: center
-                justify-content: space-between
-            
-            &-intro
-                @include variables.desktop
-                    order: 2
-                
-                &-img 
-                    min-height: 170px
-                    max-height: 230px
-                    width: 100vw
-
-                    @include variables.tablet
-                        min-height: 310px
-                        max-height: 350px
-                    @include variables.desktop           
-                        min-height: 400px
-                        max-height: 527px
-                        width: 100%
-            & div
-                display: flex
-                flex-direction: column
-                justify-content: center
-
-                @include variables.desktop
-                    order: 1
-                    flex-direction: row
-                    justify-content: space-between
-                    column-gap: 15px
-                    width: 630px
-                    height: 303px
-
-                & .main-content-info
-                    @include variables.desktop
-                        width: 475px
-
-                    &-title
-                        margin: 9px 0 16px 0
-
-                        @include variables.tablet
-                            margin: 16px 0
-
-                        @include variables.desktop
-                            margin: 11px 0 17px 0
-
-                    &-description
-                        @include variables.desktop
-                            min-width: 300px
-                            max-width: 444px
-                            margin: 0
-                            padding: 0
-
-    & .main-menu
-
-        & ul
-            margin: 34px 0 26px 0
-
-            @include variables.tablet
-                margin: 56px 0 44px 0
-
-            @include variables.desktop
-                flex-direction: column
-                row-gap: 32px
-                margin: 0
-
-        & li
-            @include variables.font-primary(16px)
-            width: 40px
-            height: 40px
-            border-radius: 50%
-            border: 1px solid rgba(255, 255, 255, 0.25)
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-
-            @include variables.tablet
-                height: 60px
-                width: 60px
-                font-size: 24px
-
-            @include variables.tablet
-                height: 80px
-                width: 80px
-                font-size: 32px
-
-            &:hover
-                border: 1px solid variables.$primary-color
-                cursor: pointer
-
-        & .active
-            background: variables.$primary-color
-            color: variables.$bg-color

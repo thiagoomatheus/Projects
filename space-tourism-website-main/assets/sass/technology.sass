@@ -1,0 +1,106 @@
+@use 'variables'
+
+body
+    @include variables.body-mobile(technology)
+
+    @include variables.tablet
+        @include variables.body-tablet(technology)
+
+    @include variables.desktop
+        @include variables.body-desktop(technology)
+
+.main
+    @include variables.desktop
+        margin-right: -3vw
+    
+    &-content
+        @include variables.tablet
+            min-width: 458px
+        @include variables.desktop
+            max-width: none
+            align-items: center
+            justify-content: space-between
+        
+        &-intro
+            @include variables.desktop
+                order: 2
+            
+            &-img 
+                min-height: 170px
+                max-height: 230px
+                width: 100vw
+
+                @include variables.tablet
+                    min-height: 310px
+                    max-height: 350px
+                @include variables.desktop           
+                    min-height: 400px
+                    max-height: 527px
+                    width: 100%
+        & div
+            @include variables.flex-column(center, none)
+
+            @include variables.desktop
+                order: 1
+                @include variables.flex-row(space-between, start)
+                column-gap: 15px
+                width: 630px
+                height: 303px
+
+            & .main-content-info
+                @include variables.desktop
+                    width: 475px
+
+                &-title
+                    margin: 9px 0 16px 0
+
+                    @include variables.tablet
+                        margin: 16px 0
+
+                    @include variables.desktop
+                        margin: 11px 0 17px 0
+
+                &-description
+                    @include variables.desktop
+                        min-width: 300px
+                        max-width: 444px
+                        margin: 0
+                        padding: 0
+
+.main-menu
+    & ul
+        margin: 34px 0 26px 0
+
+        @include variables.tablet
+            margin: 56px 0 44px 0
+
+        @include variables.desktop
+            flex-direction: column
+            row-gap: 32px
+            margin: 0
+
+        & li
+            @include variables.font-primary(16px)
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            border: 1px solid rgba(255, 255, 255, 0.25)
+            @include variables.flex-column(center, center)
+
+            @include variables.tablet
+                height: 60px
+                width: 60px
+                font-size: 24px
+
+            @include variables.tablet
+                height: 80px
+                width: 80px
+                font-size: 32px
+
+            &:hover
+                border: 1px solid variables.$primary-color
+                cursor: pointer
+
+        .active
+            background: variables.$primary-color
+            color: variables.$bg-color
