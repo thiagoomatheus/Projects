@@ -1,0 +1,101 @@
+@use 'variables'
+
+
+body
+    @include variables.body-mobile(crew)
+
+    @include variables.tablet
+        @include variables.body-tablet(crew)
+
+    @include variables.desktop
+        @include variables.body-desktop(crew)
+        padding-bottom: 0
+
+.main
+    @include variables.desktop
+        margin-right: 0
+    
+    &-content
+        @include variables.tablet
+            margin-bottom: 0
+            flex-direction: column-reverse
+
+        @include variables.desktop
+            max-width: none
+            margin: 0
+            flex-direction: row-reverse
+
+        &-intro
+            &-img
+                height: 223px
+
+                @include variables.tablet
+                    height: 532px
+
+                @include variables.desktop
+                    height: none
+                    min-width: 300px
+                    max-width: 616px
+
+        & div
+            @include variables.tablet
+                display: flex
+                flex-direction: column-reverse
+
+            @include variables.desktop
+                margin-bottom: 10vh
+                justify-content: space-between
+                height: 406px
+
+        &-info
+            @include variables.desktop
+                @include variables.flex-column(center, none)
+
+            &-title
+                margin: 8px 0 16px 0
+
+                @include variables.desktop
+                    margin: 15px 0 27px 0
+
+            &-description
+                @include variables.tablet
+                    height: 84px
+
+                @include variables.desktop
+                    height: 128px
+                    min-width: 350px
+                    max-width: 444px
+                    margin: 0
+                    padding: 0
+    
+.main-menu
+    & ul
+        margin: 32px 0
+
+        @include variables.tablet
+            margin: 40px 0
+
+        @include variables.desktop
+            margin: 0
+            justify-content: flex-start
+
+    & li
+        width: 10px
+        height: 10px
+        background: variables.$primary-color
+        border-radius: 50%
+        opacity: 0.17
+
+        @include variables.desktop
+            width: 15px
+            height: 15px
+
+        &:hover
+            opacity: 0.5
+            cursor: pointer
+
+    & .active
+        opacity: 1
+        
+    & span
+        display: none
