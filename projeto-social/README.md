@@ -12,7 +12,7 @@ O objetivo da página é divulgar as redes sociais pessoais de maneira prática,
 
 ## Conheça o projeto
 
-![Projeto Login - Desktop](images/screenshot.png)
+![Projeto Login - Desktop](imagens/screenshot.png)
 
 [Acesse o projeto no ar aqui](https://thiagoomatheus.github.io/projects/projeto-social/index.html)
 
