@@ -17,7 +17,7 @@ Abaixo, você vai encontrar outros projetos meus. Um detalhe importante: alguns 
 </details>
 
 <details close>
-    <summary style="font-size: 22px; font-weight: bold; padding-bottom: 15px">Space Rourism Website</summary>
+    <summary style="font-size: 22px; font-weight: bold; padding-bottom: 15px">Space Tourism Website</summary>
     <p>Descrição do projeto: <a href="https://github.com/thiagoomatheus/projects/tree/main/space-tourism-website-main" target="_blank">Clique aqui</a></p>
     <p>Produção: <a href="https://thiagoomatheus.github.io/projects/space-tourism-website-main/" target="_blank">Clique aqui</a></p>
 </details>
